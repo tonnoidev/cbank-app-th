@@ -5,7 +5,6 @@ dist
 lib
 test
 target
-*.zip
 *.xls
 
 # Logs
