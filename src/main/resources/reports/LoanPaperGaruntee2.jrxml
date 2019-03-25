@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3cec327e-1b59-4754-b969-8dcd91594fd7">
+	<property name="ireport.zoom" value="1.6105100000000014"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="497"/>
+	<parameter name="p42" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from cb_passbook_default limit 0,1]]>
+	</queryString>
+	<field name="id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fix_line" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="width_cm" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="height_cm" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="top_cm" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="72" splitType="Stretch"/>
+	</pageHeader>
+	<detail>
+		<band height="730" splitType="Stretch">
+			<staticText>
+				<reportElement x="43" y="0" width="493" height="20" uuid="23f57a82-2081-4389-9cd8-ed89b5419732"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[ข้อ ๖.) ในกรณีผู้ถึงแก่ความตาย ผู้ค้ำประกันยินยอมรับผิดชดใช้หนี้ในจำนวนที่ผู้กู้ยังคงค้างชำระอยู่กับผู้ให้กู้ต่อไปจนครบถ้วน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="20" width="493" height="20" uuid="8a2bf3e2-7077-4c4f-a0b3-7773e8ecef5d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[ข้อ ๗.) ในกรณีที่ผู้ค้ำประกันได้เปลี่ยนแปลงชื่อตัว ชื่อสกุล หรือเปลี่ยนแปลงที่อยู่ หรือย้ายทะเบียนบ้าน ผู้ค้ำประกันจะ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="40" width="536" height="20" uuid="979c4aaa-fd0b-4bb2-95dc-7e1e5bf7f7a5"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[ต้องแจ้งให้ ผู้ให้กู้หรือคณะกรรมการกองทุนหมู่บ้าน/ชุมชน ฯ ทราบโดยเร็ว]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="60" width="493" height="20" uuid="2d300528-9612-4aa0-b9bd-d3b00b87db61"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[ข้อ ๘.) บรรดาหนังสือติดต่อทวงถาม บอกกล่าว หรือหนังสืออื่นใดที่จะส่งให้แก่ผู้ค้ำประกัน ให้ส่งทางไปรษณีย์ลง]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="80" width="536" height="20" uuid="4b57a50c-74f8-4aa4-b6dc-3d29040e8f69"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[ทะเบียนตอบรับเท่านั้น]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="100" width="493" height="20" uuid="4976d94c-840f-434f-8e0f-d2343fa274ac"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[ในกรณีที่ผู้ค้ำประกันถูกรื้อถอนบ้านโดยประการใด ๆ  หรือย้ายถิ่นที่อยู่โดยมิได้แจ้งให้ผู้กู้หรือส่งไม่ได้เพราะไม่พบสถานที่]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="120" width="536" height="20" uuid="48f9ac22-4aa6-43a1-ace8-a4bc6b38dc73"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[ที่ระบุไว้ข้างต้นก็ดี ให้ถือว่าผู้ค้ำประกันได้ทราบหนังสือติดตามทวงถาม บอกกล่าวหรือหนังสืออื่นใดของผู้ให้กู้โดยชอบแล้ว]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="140" width="493" height="20" uuid="12428d50-3823-49c7-a299-a04fb95a4d2a"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[ผู้ค้ำประกันและคู่สัญญา ผู้ที่เกี่ยวข้องทุกฝ่าย ได้อ่านข้อความในสัญญาผู้ค้ำประกันโดยตลอดแล้ว เห็นว่าถูกต้องครบถ้วน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="160" width="536" height="20" uuid="911146f6-6779-4840-8b51-4d5492193377"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[ตามความประสงค์ จึงได้ลงลายมือชื่อไว้เป็นหลักฐานต่อหน้าพยาน ณ. วัน เดือน ปี ที่ระบุข้างต้น]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="230" width="252" height="20" uuid="84da6faa-f103-4a43-a54e-73df7a31b20a"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[ลงชื่อ ...............................................................ผู้ค้ำประกัน ลำดับที่ 1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="250" width="17" height="20" uuid="93c3ab56-d114-4004-a507-36a8b2ab14f7"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[(]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="250" width="246" height="20" uuid="acd2032e-93e7-4ca5-8b27-78e01c642376"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[(.....................................................................................)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="230" width="246" height="20" uuid="5d08a5f0-f83f-41c1-9501-80151ab4dc5e"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[ลงชื่อ .................................................................... คู่สมรส]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="300" width="252" height="20" uuid="08f5e832-b484-4551-be4c-7dab93fe248b"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[(.....................................................................................)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="300" width="246" height="20" uuid="ce178bae-4c80-4664-8ed8-a5bec1ea49b3"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[(.....................................................................................)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="280" width="252" height="20" uuid="b8bc49c3-6b38-4413-8070-3a5dbedb9ea5"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[ลงชื่อ ...............................................................ผู้ค้ำประกัน ลำดับที่ 2 ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="280" width="246" height="20" uuid="09cf183c-ffac-4a51-811b-51c9548a04fd"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[ลงชื่อ .................................................................... คู่สมรส]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="606" width="252" height="20" uuid="1cc690a1-3b0b-438b-9b70-84552a5b1459"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[(.....................................................................................)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="606" width="246" height="20" uuid="99f14a7a-d12b-4285-8f22-a464c2b6fe46"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[(.....................................................................................)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="586" width="252" height="20" uuid="ee9c998c-8019-42ce-8b1d-33918277f8a0"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[ลงชื่อ ...............................................................พยาน/รับรอง]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="586" width="246" height="20" uuid="286c90d7-d963-4141-a207-f183f1cd096f"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[ลงชื่อ .................................................................... พยาน/รับรอง]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="656" width="252" height="20" uuid="062dfa73-2314-4a55-88ad-3cc26078083c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[(.....................................................................................)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="656" width="246" height="20" uuid="f34ce817-f78f-4462-a09f-0f9465b6c1bb"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[(.....................................................................................)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="636" width="252" height="20" uuid="a7f94fed-3d49-41b6-ad38-e34799307faf"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[ลงชื่อ ...............................................................ผู้ให้กู้/ผู้แทนกองทุน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="636" width="246" height="20" uuid="275a33e7-86db-45fe-bebf-e43a4918ae62"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[ลงชื่อ ................................................................ ผู้ให้กู้/ผู้แทนกองทุน ฯ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="199" y="250" width="17" height="20" uuid="a5a835b3-2eb9-4227-9c32-38edeafa1af1"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[)]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="43" y="250" width="156" height="20" uuid="16e0665d-fe31-4152-954b-eca14a4e8db6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p42}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="290" y="351" width="246" height="20" uuid="7f15daf8-70b3-4c6c-82f5-c0e48b45a630"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[(.....................................................................................)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="331" width="246" height="20" uuid="7223e1e0-adeb-45d2-bc57-69136acabf7e"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[ลงชื่อ .................................................................... คู่สมรส]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="351" width="252" height="20" uuid="5f753fdb-f3eb-42cb-a165-89f435d8c3d5"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[(.....................................................................................)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="331" width="252" height="20" uuid="0cfdacdf-db2a-4c5d-830d-b6f6ccd13004"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[ลงชื่อ ...............................................................ผู้ค้ำประกัน ลำดับที่ 2 ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="402" width="246" height="20" uuid="38ba0570-5e2d-43cf-9912-045346701368"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[(.....................................................................................)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="382" width="246" height="20" uuid="11cb77ba-ce7d-4cc6-b6c4-fd5aa81009cf"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[ลงชื่อ .................................................................... คู่สมรส]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="402" width="252" height="20" uuid="f5fde86f-1858-4498-844f-0a882261f208"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[(.....................................................................................)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="382" width="252" height="20" uuid="e28a1a0b-59d8-4372-84f1-d057c9be6386"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[ลงชื่อ ...............................................................ผู้ค้ำประกัน ลำดับที่ 2 ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="453" width="246" height="20" uuid="3899e6ac-b365-4a6c-8c0e-56f5121873e5"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[(.....................................................................................)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="433" width="246" height="20" uuid="483e2458-f8c8-44f1-ad06-65cf1d59815d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[ลงชื่อ .................................................................... คู่สมรส]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="453" width="252" height="20" uuid="ab217391-4315-450d-ae1d-915f92d42f8e"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[(.....................................................................................)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="433" width="252" height="20" uuid="aa50f1c1-8615-4c3e-bc92-eef761b5f370"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[ลงชื่อ ...............................................................ผู้ค้ำประกัน ลำดับที่ 2 ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="482" width="252" height="20" uuid="72744a91-7d17-4b80-a09a-a1a9704a9a70"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[ลงชื่อ ...............................................................ผู้ค้ำประกัน ลำดับที่ 2 ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="502" width="246" height="20" uuid="50c11cde-f247-4e59-8457-70ef875faf44"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[(.....................................................................................)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="482" width="246" height="20" uuid="6bc6bf62-c652-4de5-a8fc-b0939e82906f"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[ลงชื่อ .................................................................... คู่สมรส]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="502" width="252" height="20" uuid="1885e88d-74e4-4674-8bd7-eb9965422add"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[(.....................................................................................)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="533" width="252" height="20" uuid="227597bf-a936-4da4-b682-438149cba627"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[ลงชื่อ ...............................................................ผู้ค้ำประกัน ลำดับที่ 2 ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="553" width="246" height="20" uuid="4f2bd1df-71ff-4966-91b9-bfe4f033a8a5"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[(.....................................................................................)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="533" width="246" height="20" uuid="5cf1bae5-da0e-4e1e-97ca-0c9ca127b5d2"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[ลงชื่อ .................................................................... คู่สมรส]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="553" width="252" height="20" uuid="b886ae51-4d76-4b2a-a1fd-ddb6c8000b4c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[(.....................................................................................)]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

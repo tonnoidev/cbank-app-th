@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="12118a03-c84f-4b7e-807a-642aad24e4d9">
+	<property name="ireport.zoom" value="1.8627639691774651"/>
+	<property name="ireport.x" value="103"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="parameter1" class="java.lang.String"/>
+	<parameter name="parameter2" class="java.lang.String"/>
+	<parameter name="parameter3" class="java.lang.String"/>
+	<parameter name="parameter4" class="java.lang.String"/>
+	<parameter name="parameter5" class="java.lang.String"/>
+	<parameter name="AccCode" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from cb_transaction_save 
+where t_acccode=$P{AccCode} 
+order by t_date,t_time]]>
+	</queryString>
+	<field name="t_date" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="t_time" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="t_acccode" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="t_custcode" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="t_description" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="t_amount" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="t_empcode" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="t_docno" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="remark" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="t_booktype" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="t_hoon" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="LineNo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PrintChk" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="t_balance" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="t_index" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="money_in" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="money_out" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="update_interest" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="t_hoon_amt" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="t_hoon_cash" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="t_hoon_ton" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="t_hoon_rate" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="branch_code" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="t_interest" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="money_in_1" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{money_in}]]></variableExpression>
+	</variable>
+	<variable name="money_out_1" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{money_out}]]></variableExpression>
+	</variable>
+	<variable name="t_balance_1" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{t_balance}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="62" splitType="Stretch">
+			<staticText>
+				<reportElement x="129" y="37" width="322" height="24" uuid="c442e4e1-6fd6-470e-8eb6-4a8893285315"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[รายงานความเคลื่อนไหวบัญชี (Statement)]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="129" y="15" width="322" height="22" uuid="3ff04e38-144e-4ae5-b63d-d02665f8eafe"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{parameter1}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="63" splitType="Stretch">
+			<textField>
+				<reportElement x="1" y="11" width="71" height="20" uuid="6032749e-4281-46a2-9945-6d69d3f232d6"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{parameter2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="72" y="11" width="40" height="20" uuid="65e507dd-392b-4835-aa18-9ecf9d639a01"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="12"/>
+				</textElement>
+				<text><![CDATA[เลขที่บัญชี]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="112" y="11" width="46" height="20" uuid="7871daba-1865-48fa-9a25-07edfd7d9f11"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{parameter3}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="158" y="11" width="47" height="20" uuid="2128acda-4ea7-4805-8f48-2277ad7a40e3"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="12"/>
+				</textElement>
+				<text><![CDATA[ประเภทบัญชี]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="205" y="11" width="100" height="20" uuid="60f8770d-27cd-4fe7-ba6e-78c603e7a047"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{parameter4}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="305" y="11" width="30" height="20" uuid="35674173-af47-48b1-b7b9-9c67a397498f"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="12"/>
+				</textElement>
+				<text><![CDATA[ชื่อบัญชี]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="335" y="11" width="138" height="20" uuid="4d56c2c2-9cb7-453a-bbc6-dce492669463"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{parameter5}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="40" width="71" height="20" uuid="be23f78c-f433-41c6-9a4e-9cfcd388ac9b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[วันที่]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="72" y="40" width="100" height="20" uuid="82315d99-9e0c-4895-b677-40d8ad362f42"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="12" isBold="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[เลขที่เอกสาร]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="172" y="40" width="90" height="20" uuid="cc98739c-4644-4a18-9f4e-faa8444ee296"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ฝาก]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="262" y="40" width="90" height="20" uuid="9453dc4c-0906-475c-8edb-ed5348a4994a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ถอน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="352" y="40" width="98" height="20" uuid="9470fccc-4dc6-4622-93f4-28bac79dcc3e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[คงเหลือ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="451" y="40" width="100" height="20" uuid="6c46033c-f9ec-41de-933f-0b341762e5f7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[สถานะ]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="1" y="40" width="71" height="20" uuid="b34b1cba-7fbc-4c2e-badf-0039a6612ecb"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="72" y="40" width="100" height="20" uuid="3a1546f1-caa9-43be-894c-f58d3464b32d"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="172" y="40" width="90" height="20" uuid="05286a11-82a7-406a-b8a1-c230b0083ca0"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="352" y="40" width="99" height="20" uuid="b6e231cd-562b-4905-ab96-d21d041e8b5e"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="262" y="40" width="90" height="20" uuid="4f704b8c-c2cd-436d-80fe-3556e13ededd"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="451" y="40" width="100" height="20" uuid="6dc6bea1-5c56-4bdb-8990-ce27fdbf2053"/>
+			</rectangle>
+			<textField>
+				<reportElement x="473" y="11" width="78" height="20" uuid="7ec7bbee-082e-4567-9493-1ee36013e840"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="1" y="0" width="71" height="20" uuid="a30e29b9-c062-40b9-b3b7-7b497cd5d366"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{t_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="72" y="0" width="100" height="20" uuid="827983df-5070-4db2-b688-dc0f7a72e1e4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{t_docno}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="172" y="0" width="90" height="20" uuid="7a8234b2-42c9-49a9-b4aa-9929be8a95a8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{money_in}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="262" y="0" width="90" height="20" uuid="11a5bf5b-8977-4d81-8261-caab7cfccdb3"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{money_out}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="352" y="0" width="98" height="20" uuid="422fc41b-eb30-4bb4-82ad-e31085b71e3f"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{t_balance}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="462" y="0" width="89" height="20" uuid="07a05d57-779d-4349-a4d2-7f2d4af4451c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[th.co.cbank.util.ThaiUtil.ASCII2Unicode($F{t_description})]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="81" splitType="Stretch">
+			<staticText>
+				<reportElement x="72" y="3" width="100" height="20" uuid="60abde30-fe9c-4341-a8d4-4cb8fb16d163"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ยอดสุทธิ]]></text>
+			</staticText>
+			<textField pattern="#,##0.00">
+				<reportElement x="172" y="3" width="90" height="20" uuid="205a9b59-cf6e-4c26-8874-aaa767718b63"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{money_in_1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="262" y="3" width="90" height="20" uuid="0a0ee64a-f154-4b7d-9cc4-06c83f5a9100"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{money_out_1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="352" y="3" width="98" height="20" uuid="f871f9c5-f9b8-4e41-a50e-ff7da047edec"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{money_in_1}-$V{money_out_1}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="1" y="24" width="550" height="1" uuid="0cd3c70a-cf94-42c6-88fb-7bdbf222c82e"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="1" y="2" width="550" height="1" uuid="912d13a3-a4ca-46af-88b2-25bec0f1b65d"/>
+			</line>
+		</band>
+	</summary>
+</jasperReport>

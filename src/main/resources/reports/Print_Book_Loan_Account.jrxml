@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Print Account Book" pageWidth="425" pageHeight="510" columnWidth="425" leftMargin="0" rightMargin="0" topMargin="62" bottomMargin="0" uuid="0d43f8ba-45b7-4fe9-b7d7-8e8588a353c5">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="577"/>
+	<parameter name="AccountCode" class="java.lang.String"/>
+	<parameter name="AccountName" class="java.lang.String"/>
+	<parameter name="BookNo" class="java.lang.String"/>
+	<parameter name="BARCODE" class="java.lang.String"/>
+	<parameter name="AccountType" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select id from cb_passbook_default limit 0,1]]>
+	</queryString>
+	<field name="id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<detail>
+		<band height="440" splitType="Stretch">
+			<textField>
+				<reportElement x="133" y="276" width="225" height="22" uuid="54b0d588-d37b-418c-a060-135aea031a77"/>
+				<textElement>
+					<font fontName="TH SarabunPSK" size="16" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{AccountCode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="133" y="298" width="225" height="22" uuid="3edbb0c2-6be9-4b56-aeea-b06da3774844"/>
+				<textElement>
+					<font fontName="TH SarabunPSK" size="18" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{AccountName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="88" y="382" width="157" height="22" uuid="b90355e4-d9d9-4015-b4b2-8771d8a47df8"/>
+				<textElement>
+					<font fontName="TH SarabunPSK" size="16" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{BookNo}]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement x="133" y="320" width="200" height="50" uuid="7e41db16-06b2-4f51-97b4-6c283c03dd04"/>
+				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code39" drawText="false" checksumRequired="false">
+					<jr:codeExpression><![CDATA[$P{BARCODE}]]></jr:codeExpression>
+				</jr:barbecue>
+			</componentElement>
+			<textField>
+				<reportElement x="133" y="350" width="200" height="20" uuid="e7091ca9-8f98-4fb0-9ea3-dca1d50d1bd1"/>
+				<textElement>
+					<font fontName="TH SarabunPSK" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{AccountType}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

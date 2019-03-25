@@ -1,0 +1,809 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" whenNoDataType="BlankPage" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d4c4aab9-c15f-4cdd-972d-8fb6d1b43458">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="p1" class="java.lang.String"/>
+	<parameter name="p2" class="java.lang.String"/>
+	<parameter name="p3" class="java.lang.String"/>
+	<parameter name="p4" class="java.lang.String"/>
+	<parameter name="p5" class="java.lang.String"/>
+	<parameter name="p6" class="java.lang.String"/>
+	<parameter name="p7" class="java.lang.String"/>
+	<parameter name="p8" class="java.lang.String"/>
+	<parameter name="p9" class="java.lang.String"/>
+	<parameter name="p10" class="java.lang.String"/>
+	<parameter name="p11" class="java.lang.String"/>
+	<parameter name="p12" class="java.lang.String"/>
+	<parameter name="p13" class="java.lang.String"/>
+	<parameter name="p14" class="java.lang.String"/>
+	<parameter name="p15" class="java.lang.String"/>
+	<parameter name="p16" class="java.lang.String"/>
+	<parameter name="p17" class="java.lang.String"/>
+	<parameter name="p18" class="java.lang.String"/>
+	<parameter name="p19" class="java.lang.String"/>
+	<parameter name="p20" class="java.lang.String"/>
+	<parameter name="p21" class="java.lang.String"/>
+	<parameter name="p22" class="java.lang.String"/>
+	<parameter name="p23" class="java.lang.String"/>
+	<parameter name="p24" class="java.lang.String"/>
+	<parameter name="p25" class="java.lang.String"/>
+	<parameter name="p26" class="java.lang.String"/>
+	<parameter name="p27" class="java.lang.String"/>
+	<parameter name="p28" class="java.lang.String"/>
+	<parameter name="p29" class="java.lang.String"/>
+	<parameter name="p30" class="java.lang.String"/>
+	<parameter name="p31" class="java.lang.String"/>
+	<parameter name="p32" class="java.lang.String"/>
+	<parameter name="p33" class="java.lang.String"/>
+	<parameter name="p34" class="java.lang.String"/>
+	<parameter name="p35" class="java.lang.String"/>
+	<parameter name="p36" class="java.lang.String"/>
+	<parameter name="p37" class="java.lang.String"/>
+	<parameter name="p38" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from cb_passbook_default limit 0,1]]>
+	</queryString>
+	<field name="id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fix_line" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="width_cm" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="height_cm" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="top_cm" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="41" y="0" width="266" height="20" uuid="e7480216-cb77-48d8-bdb8-b3c83cf8a547"/>
+				<textElement>
+					<font fontName="TH SarabunPSK" size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p1}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="101" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement x="144" y="18" width="215" height="26" uuid="d2ea0472-04cb-483d-98a6-068f3269bcdb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="22" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="332" y="57" width="36" height="20" uuid="90f861fc-c086-4b8d-a8fd-483c4b32b358"/>
+				<textElement>
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[เขียนที่]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="368" y="57" width="187" height="20" uuid="3397a587-b8c0-48d5-aacb-7e3bcdb3879a"/>
+				<textElement>
+					<font fontName="TH SarabunPSK" size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p3}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="332" y="77" width="36" height="20" uuid="4f714dc8-92f0-4d3d-b134-9e5e4f871b5c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[วันที่]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="368" y="77" width="132" height="20" uuid="c2ee437a-61f7-481e-8efd-a2597911b360"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p4}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="77" width="64" height="20" uuid="fe98dd87-02fa-4b07-be53-693d547e5af3"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[สัญญากู้เลขที่]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="64" y="77" width="100" height="20" uuid="c719f89f-5f4b-45a7-94f8-04207e8050d4"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p5}]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement x="387" y="15" width="168" height="39" uuid="8af65f52-e5be-4b27-b66a-04de6c640bd0"/>
+				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code39" drawText="true" checksumRequired="false">
+					<jr:codeExpression><![CDATA[$P{p5}]]></jr:codeExpression>
+				</jr:barbecue>
+			</componentElement>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="382" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="21" width="23" height="20" uuid="a744c2db-d831-4ed1-8a7d-bfa52a0aab7e"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[ซอย]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="41" width="29" height="20" uuid="e5460dd8-fd60-4de8-a0ce-79547a3d1c0c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[จังหวัด]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="61" width="83" height="20" uuid="c9e947c5-50d4-46e0-8168-b239beb93523"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[บัตรประชาชนเลขที่]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="1" width="37" height="20" uuid="e7fae38a-c84a-4fb0-8e26-f04c5efdc7de"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[ข้าพเจ้า]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="81" width="194" height="20" uuid="d88b3960-eccd-47a5-bc8a-4d09b12ffafe"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[ซึ่งต่อไปนี้เรียกว่า "ผู้กู้" ขอทำหนังสือฉบับนี้ไว้ให้แก่]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="101" width="100" height="20" uuid="3c344a70-cbf7-4435-bef7-7376daf8c736"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[ทะเบียนนิติบุคคลเลขที่]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="121" width="114" height="20" uuid="008752f5-c51f-46db-bdb2-58d65b49ad29"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[ข้อ 1. ผู้กู้ได้เงินกู้ประเภท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="64" y="141" width="63" height="20" uuid="e1b82e09-d926-4ea7-918c-ac0e3c2bb336"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[เป็นจำนวนเงิน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="161" width="141" height="20" uuid="83dbaa20-651f-46fd-a1c9-6c65023145d3"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[โดยใช้หลักทรัพย์ค้ำประกันการกู้คือ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="181" width="282" height="20" uuid="54e48e95-8db4-4dc1-b926-6eeba4582fd3"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[และผู้กู้ได้รับเงินจำนวนดังกล่าวไปถูกต้องครบถ้วนแล้วในวันที่ทำสัญญานี้]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="201" width="255" height="20" uuid="d4883119-a683-439a-bf1d-7fd90e19da73"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[ข้อ 2. ผู้กู้ยินยอมเสียดอกเบี้ยให้ผู้กู้ตามที่ผู้กู้ประกาศกำหนดร้อยละ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="221" width="237" height="20" uuid="b000860b-ae31-4f44-93bd-764b2a283c19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[ข้อ 3. ผู้กู้ยินยอมชำระต้นเงินกู้และดอกเบี้ยเงินกู้เป็นงวดราย]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="241" width="318" height="20" uuid="b84d529b-96c1-4834-a8af-f70755ec0021"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[และมีกำหนดระยะเวลาการชำระหนี้เงินกู้และดอกเบี้ยให้แก่ผู้ให้กู้ภายในระยะเวลา]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="261" width="207" height="20" uuid="88878a07-e73a-4bfb-b2e0-d86921591c21"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[โดยผู้กู้จะเริ่มชำระต้นเงินกู้และดอกเบี้ยเงินกู้ตั้งแต่ วันที่]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="281" width="207" height="20" uuid="2195299f-7da7-4823-a323-a86498203a34"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[และจำชำระหนี้เงินกู้ดังกล่าวให้หมดสิ้นภายใน   วันที่]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="301" width="269" height="20" uuid="606b92fe-c6f8-4ea1-a839-31f37263a171"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[ข้อ 4. ถ้าผู้กู้ผิดนัดไม่ชำระเงินกู้และดอกเบี้ยตามงวดชำระภายในกำหนด]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="321" width="244" height="20" uuid="32fbf52b-b812-4d0e-bf6b-ce1f58bec865"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[ชำระผู้กู้ยินยอมให้คิดดอกเบี้ยผิดนัดชำระเพิ่มอีกในอัตราร้อยละ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="341" width="422" height="20" uuid="6fcaab94-57e4-40cb-83a2-08a6246cd586"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[ข้อ 5. กรณีที่ผู้กู้ไม่ปฏิบัติตามสัญญาหรือปฏิบัติผิดสัญญาข้อหนึ่งข้อใด ให้ถือว่าผู้กู้ผิดนัดทั้งหมดและให้ผู้กู้มีสิทธิ์]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="361" width="484" height="20" uuid="5759b644-ae05-448f-8251-cc6cf115dfa2"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[เรียกร้องให้ผู้กู้ชำระคืนเงินกู้ทันที และยินยอมชดใช้ค่าเสียหายที่ผู้ให้กู้พึงได้รับอันเนื่องจากการผิดสัญญาจนเต็มจำนวนทุกประการ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="282" y="321" width="225" height="20" uuid="9051770c-b06a-4d57-a743-5f3b1db8fd06"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[ต่อเดือนของยอดเงินกู้ที่ค้างชำระจนกว่าจะชำระหมดสิ้น]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="339" y="301" width="110" height="20" uuid="b3f64711-b597-4057-86a6-e8cf71eaddca"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[วัน นับแต่วันครบกำหนดงวด]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="244" y="261" width="25" height="20" uuid="c01f0a86-811e-4e82-8f9a-897da9b5c6cc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[เดือน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="244" y="281" width="25" height="20" uuid="fe85cca8-f3a7-4992-a7a0-f1704fc98403"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[เดือน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="333" y="261" width="20" height="20" uuid="12c1a81b-43df-4b43-90d6-0069cfc8d92c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[พ.ศ.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="333" y="281" width="20" height="20" uuid="14e8a4c3-851d-42ab-85e7-7ca4933a10d1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[พ.ศ.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="423" y="261" width="61" height="20" uuid="45044e6a-2dfb-459a-a58e-11d8d6ae9f49"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[เป็นต้นไป]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="367" y="241" width="25" height="20" uuid="aa76dc68-6d63-444e-a18d-99d85328cea9"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[งวด]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="318" y="221" width="143" height="20" uuid="7fe8c0fc-75e3-4c58-b55d-bd903db176c6"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[งวด โดยจะชำระคืนอย่างน้อยงวดละ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="522" y="221" width="20" height="20" uuid="e68e2c51-fbb2-44a7-afa2-327ab496d86c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="339" y="201" width="42" height="20" uuid="0ed44241-936b-43b9-9681-94fe719e3374"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[ต่อเดือน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="207" y="101" width="180" height="20" uuid="5e6d178b-a3ac-4bf0-affe-12faa7d4ea20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[ซึ่งต่อไปนี้เรียกว่า "ผู้ให้กู้" เพื่อเป็นหลักฐานว่า]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="244" y="1" width="20" height="20" uuid="5d71fc3c-aebf-4e8e-8ef2-06327b473d0b"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[อายุ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="296" y="1" width="11" height="20" uuid="94a0e727-b93d-4568-9a8c-1916d7ec3055"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[ปี]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="318" y="1" width="49" height="20" uuid="0af0bddd-9056-4577-8964-f855fdb7527e"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[อยู่บ้านเลขที่]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="441" y="1" width="31" height="20" uuid="bf5109a0-9e93-43da-999a-75aa2afc37ff"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[หมู่ที่]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="103" y="21" width="23" height="20" uuid="30c57f7c-d889-47c9-ba1f-c78be49f62ec"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[ถนน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="216" y="21" width="48" height="20" uuid="15cc70b9-43a1-44a6-932c-a6a40031ddc9"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[ตำบล/แขวง]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="381" y="21" width="45" height="20" uuid="f81ec52c-749d-4789-8884-e3c7136c9b3b"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[อำเภอ/เขต]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="127" y="41" width="52" height="20" uuid="a71bd5e7-45cb-4af3-a1a1-b4d4ed0e616c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[รหัสไปรษณีย์]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="244" y="41" width="38" height="20" uuid="303e1bf0-cc1f-4bf9-9184-942c7b947e7c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[โทรศัพท์]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="194" y="61" width="50" height="20" uuid="05b21eab-2135-4559-9338-abd167398878"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[วันที่ออกบัตร]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="353" y="61" width="50" height="20" uuid="ef1f4bb5-80a3-488a-adc9-30f9c767ab76"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[วันที่หมดอายุบัตร]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="224" y="141" width="20" height="20" uuid="641b42aa-7cdb-4d4d-8f90-b93fa4b6fb7e"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[บาท]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="64" y="1" width="180" height="20" uuid="9bfef417-f0a1-44ff-afc8-6390921cbe9d"/>
+				<box bottomPadding="1">
+					<pen lineStyle="Dotted"/>
+					<topPen lineStyle="Dotted"/>
+					<leftPen lineStyle="Dotted"/>
+					<bottomPen lineStyle="Dotted"/>
+					<rightPen lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true" isUnderline="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p6}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="264" y="1" width="32" height="20" uuid="6850f2fb-a804-4196-9111-b0309b500b34"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p7}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="367" y="1" width="74" height="20" uuid="97e153eb-fcae-4e21-add4-104ad036ed50"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p8}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="472" y="1" width="35" height="20" uuid="68c06752-9461-45b8-8a37-68ed0107904e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p9}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="23" y="21" width="77" height="20" uuid="9373a094-af4f-42f2-bf3a-56b95f06c7a3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p10}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="127" y="21" width="89" height="20" uuid="5b41476a-352c-4c75-aef9-e2f725f48c2d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p11}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="264" y="21" width="117" height="20" uuid="2928dab7-314d-4627-a78b-3d65a92aa6a9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p12}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="423" y="21" width="119" height="20" uuid="a902d8f1-a963-4cfc-9f88-28de7bebc607"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p13}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="29" y="41" width="97" height="20" uuid="7699b7e8-9a2e-4f18-86bb-2cd3bf9f308d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p14}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="179" y="41" width="65" height="20" uuid="6967041c-ec3d-4f7e-b67f-5f0eff0433e0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p15}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="281" y="41" width="122" height="20" uuid="6e6bcc03-140b-4dff-aeca-ee859207754e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p16}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="83" y="61" width="111" height="20" uuid="cc829f8c-cc1d-469c-9180-c3a17458960f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p17}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="244" y="61" width="109" height="20" uuid="0d1c6f5b-6ab2-44d6-8108-fb343597fe9f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p18}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="407" y="61" width="100" height="20" uuid="4b193465-370a-4091-a4da-4198fbe4e053"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p19}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="100" y="101" width="107" height="20" uuid="0ae08f15-e31d-4827-9d83-d485d91a2a6a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p21}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="144" y="121" width="163" height="20" uuid="c643b960-adbb-413a-88f9-f483a8d5c1af"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p22}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="127" y="141" width="97" height="20" uuid="19c571b7-0e0b-4af7-a56b-5e36d48953d0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p23}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="282" y="201" width="57" height="20" uuid="72902eb5-d4f0-426c-8b20-01609ea197f6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p26}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="267" y="221" width="51" height="20" uuid="c7eda68e-8d29-40d2-8219-c5e68026fb7c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p27}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="318" y="241" width="49" height="20" uuid="d6a844ca-abf4-466f-b2bf-c4e7b2964095"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p29}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="207" y="261" width="37" height="20" uuid="fdcc5141-8f7f-4725-af08-92fad276f65f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p30}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="269" y="261" width="64" height="20" uuid="a8ce9884-9f49-444f-8177-6d196967161f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p31}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="353" y="261" width="54" height="20" uuid="db8a481e-4df1-442b-ae72-be049efe24fc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p32}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="207" y="281" width="37" height="20" uuid="83bd364e-f3bf-46c0-a1d0-3c4470fe5dfb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p33}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="269" y="281" width="64" height="20" uuid="b31800e8-dfbb-4e45-97a5-c677c47ac611"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p34}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="353" y="281" width="54" height="20" uuid="009b6f13-8ec2-4fbf-8437-0af54e945442"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p35}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="296" y="301" width="37" height="20" uuid="618c0f5d-77c7-4484-95ed-ca5014bf7fe5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p36}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="244" y="321" width="38" height="20" uuid="40078a01-47d0-4044-b460-127f6d5c2219"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p37}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="253" y="141" width="219" height="20" uuid="e1eb2cbb-28a4-413e-8972-c6bd96019809"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p24}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="461" y="221" width="61" height="20" uuid="5735cdea-e197-4ca2-8c74-cbc3eeb26806"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p28}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="196" y="81" width="346" height="20" uuid="88d089f6-2578-45dc-89a1-6ab85ed5347d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p20}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="141" y="161" width="401" height="20" uuid="bc25d9b8-e02d-4c0a-b61a-9476e89dd976"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p25}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="176" splitType="Stretch">
+			<staticText>
+				<reportElement x="9" y="14" width="255" height="20" uuid="50c87d20-a75d-460d-8971-23371e9a7ee0"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[ลงชื่อ.........................................................ผู้กู้]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="34" width="6" height="20" uuid="6fe5dfb8-c6b4-4877-bca7-29777169503a"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[(]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="318" y="14" width="224" height="20" uuid="6160f206-9d95-4820-b432-fab6052d185e"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[ลงชื่อ...........................................................ผู้ให้กู้]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="333" y="34" width="6" height="20" uuid="e0fae7a6-6cdc-47f4-a16c-d27f58ad65aa"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[(]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="69" width="255" height="20" uuid="8de04240-3885-44a2-8076-be37837a4b5f"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[ลงชื่อ........................................................คู่สมรสผู้กู้]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="89" width="6" height="20" uuid="62898199-d89f-4e49-95ab-753885e71cbc"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[(]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="318" y="69" width="224" height="20" uuid="49833620-3ce7-40ec-9c1e-4e755b5282c3"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[ลงชื่อ...........................................................ผู้ให้กู้]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="333" y="89" width="6" height="20" uuid="b6a308be-8fa9-4ba3-a337-e1fcc38e57b5"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[(]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="318" y="123" width="224" height="20" uuid="daf0a35d-e7d1-4335-936b-331366c7696c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[ลงชื่อ.........................................................พยานผู้ให้กู้]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="333" y="143" width="6" height="20" uuid="00edde18-a371-4038-962c-8cffbda8f92f"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[(]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="143" width="6" height="20" uuid="5a17cf8f-2d0c-4145-87ec-22baf6386d10"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[(]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="123" width="255" height="20" uuid="093b2c15-0e84-4dbc-b839-a2a973bd6255"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[ลงชื่อ.........................................................พยานผู้กู้]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="171" y="34" width="6" height="20" uuid="61a0ad23-31f5-4652-b791-134ffeb97c4a"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="171" y="89" width="6" height="20" uuid="5d02217b-04a6-4ab2-81bc-2cc78aa436c8"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="171" y="143" width="6" height="20" uuid="af4d3680-7a4e-4623-8ad2-539f60e1cdfc"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="484" y="34" width="6" height="20" uuid="da8265ee-6068-435d-92da-127988f32fff"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="484" y="89" width="6" height="20" uuid="5cb548da-c313-4b62-a840-39c445245bbd"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="484" y="143" width="6" height="20" uuid="bbeb9991-8645-4770-b36f-808c94ed21e6"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[)]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="29" y="34" width="142" height="20" uuid="20b71a7e-1529-45aa-ad45-8bcdb2f29b34"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{p38}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

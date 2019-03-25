@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Deposit Report" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="31051e58-bb70-47f6-8afc-8cd09438c549">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="CUST_NAME" class="java.lang.String"/>
+	<parameter name="DEPOSIT_NO" class="java.lang.String"/>
+	<parameter name="CUST_CODE" class="java.lang.String"/>
+	<parameter name="TEXT_MONEY" class="java.lang.String"/>
+	<parameter name="NUMBER_MONEY" class="java.lang.String"/>
+	<parameter name="BRANCH_NAME" class="java.lang.String"/>
+	<parameter name="D_DATE" class="java.lang.String"/>
+	<parameter name="D_TIME" class="java.lang.String"/>
+	<parameter name="COM_NAME" class="java.lang.String"/>
+	<parameter name="COM_ADDR" class="java.lang.String"/>
+	<parameter name="TOTAL_BALANCE" class="java.lang.String"/>
+	<parameter name="HEAD_TEXT" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from cb_branch limit 0,1]]>
+	</queryString>
+	<field name="Code" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="AddressNo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Locality" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="SubProvince" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Province" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Post" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Tel_No" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Fax_No" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="E_Mail" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Manager" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Location_Area" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Ser_Area" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Cou_Area" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Kic_Area" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Tot_Area" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Cost" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Charge" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="FlageCost" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Gp" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="FlageGp" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Remark" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ArBillNo" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="EarneatBillNo" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ReturnBillNo" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PrintAutoSumDate" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="SaveOrder" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="SaveOrderCopy" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="SaveOrderChk" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="KIC1" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="KIC2" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="KIC3" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="KIC4" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="KIC5" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="KIC6" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="KIC7" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="KIC8" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="KIC9" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="SmartCard" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="GetFile" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="RetFile" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PointFile" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CntLoop" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="InvNo" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="InvCashNo" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="InvCash" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="InvActive" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CreditAct" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PromotionGP" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="LockTime" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="KicItemNo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PT1" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PT2" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PT3" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PT4" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PT5" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PONO" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PrintKicForm" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PrintInvForm" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PSelectStk" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PStkChk" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PMinStkChk" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="RoundUpTime" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="GiftStatusChk" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="KICCopy1" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="KICCopy2" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="KICCopy3" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="KICCopy4" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="KICCopy5" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="KICCopy6" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="KICCopy7" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="KICCopy8" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="KICCopy9" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="KICChk1" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="KICChk2" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="KICChk3" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="KICChk4" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="KICChk5" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="KICChk6" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="KICChk7" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="KICChk8" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="KICChk9" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="UpdateBranchPoint" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="46" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="44" backcolor="#99CC00" uuid="7fb53fc2-0628-4fbf-abe4-cf31e8e7aaed"/>
+			</rectangle>
+			<textField>
+				<reportElement x="12" y="2" width="292" height="22" forecolor="#FFFFFF" uuid="d524234e-95ac-4d5f-b752-116a060fe21a"/>
+				<textElement>
+					<font fontName="TH SarabunPSK" size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{COM_NAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="12" y="24" width="292" height="20" forecolor="#FFFFFF" uuid="75f70810-166f-479e-9b9f-a0ba05cf9f4a"/>
+				<textElement>
+					<font fontName="TH SarabunPSK" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{COM_ADDR}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="316" y="4" width="236" height="40" forecolor="#FFFFFF" uuid="26967146-c6f8-40f5-b2ce-f721074e7696"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="20" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{HEAD_TEXT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="237" splitType="Stretch">
+			<line>
+				<reportElement x="56" y="36" width="260" height="1" uuid="e11fee94-fade-463d-95f0-a5b566a5a35b"/>
+			</line>
+			<line>
+				<reportElement x="56" y="82" width="89" height="1" uuid="59bbf9ed-eb1c-4374-98f8-fb4af2ab67e5"/>
+			</line>
+			<staticText>
+				<reportElement x="5" y="3" width="51" height="18" uuid="b63dfdf8-d23b-4a4c-8628-a2b9372bddf3"/>
+				<textElement>
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[สาขา]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="22" width="51" height="25" uuid="c303163e-4711-4a3c-9634-df821cfe16db"/>
+				<textElement>
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[Branch]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="51" width="51" height="18" uuid="0ca0aeaf-0202-4f30-bee9-7e97336ebc3d"/>
+				<textElement>
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[วันที่]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="70" width="51" height="25" uuid="2a6ba24c-9363-4daa-9bb8-d2268e2a7a7f"/>
+				<textElement>
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<line>
+				<reportElement x="5" y="99" width="547" height="1" uuid="88b6e69b-2b1e-404e-9738-50a9ee14bb15"/>
+			</line>
+			<line>
+				<reportElement x="5" y="124" width="547" height="1" uuid="9046beb8-a537-46d5-8280-18253360bb3c"/>
+			</line>
+			<line>
+				<reportElement x="5" y="156" width="547" height="1" uuid="8a2a9be5-5fc9-4084-80e5-aea01f95d7ff"/>
+			</line>
+			<line>
+				<reportElement x="5" y="191" width="547" height="1" uuid="a1c74b53-decd-434a-a9e4-1cd02148559b"/>
+			</line>
+			<line>
+				<reportElement x="38" y="157" width="1" height="34" uuid="293d29a2-0072-4f32-86df-69a0ac7f2fe2"/>
+			</line>
+			<line>
+				<reportElement x="181" y="100" width="1" height="56" uuid="4aea02a4-5b1a-41c4-9ef6-3453ca84137a"/>
+			</line>
+			<line>
+				<reportElement x="322" y="100" width="1" height="91" uuid="2c716aa7-1288-4a76-b7b5-03062abdedd0"/>
+			</line>
+			<line>
+				<reportElement x="527" y="157" width="1" height="34" uuid="0d84669e-44b4-4e68-a719-57c9cbb35876"/>
+			</line>
+			<staticText>
+				<reportElement x="5" y="100" width="176" height="24" uuid="68119581-075e-47fb-ab4a-ba87236796b9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ชื่อลูกค้า Customer Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="182" y="101" width="138" height="24" uuid="3955bbe4-d3ab-45ee-beaf-2825b50d489a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[เลขที่ฝากเงิน Deposit No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="323" y="99" width="229" height="24" uuid="1ea793ee-1417-4eb0-bd76-676ce5f692b2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[รหัสประจำตัวลูกค้า Identity Card]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="157" width="31" height="18" uuid="23ec34ac-e682-4ddb-9afb-40904d4352b8"/>
+				<textElement textAlignment="Center">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[เงินสด]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="175" width="31" height="16" uuid="037290e4-2dde-41f9-aedb-7e7b25b24b1b"/>
+				<textElement textAlignment="Center">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[Cash]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="44" y="157" width="101" height="18" uuid="49813a15-512d-4546-8e80-94f0ffef1793"/>
+				<textElement>
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[จำนวนเงินเป็นตัวอักษร]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="44" y="175" width="101" height="16" uuid="61950fb3-fd20-4d3a-b3cb-05b16f4b026d"/>
+				<textElement>
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[Amount in Word]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="323" y="175" width="88" height="16" uuid="e96ddbc5-6c91-4541-b6f9-44f03e3f84b8"/>
+				<textElement>
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[Amount in Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="323" y="157" width="88" height="18" uuid="ab140828-0572-4e14-b024-8845c06f0e63"/>
+				<textElement>
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[จำนวนเงินเป็นตัวเลข]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="528" y="156" width="24" height="34" uuid="b0d089bf-6338-46c6-896a-8b7595649a47"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="177" y="51" width="51" height="18" uuid="947742a4-5b9a-4429-a8ec-1b21aab738c5"/>
+				<textElement>
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[เวลา]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="177" y="70" width="51" height="25" uuid="64010b53-8913-465f-bcad-e68ac475d7b4"/>
+				<textElement>
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[Time]]></text>
+			</staticText>
+			<line>
+				<reportElement x="229" y="82" width="89" height="1" uuid="f91b33d2-9abf-416e-894e-a03ce2bd19f4"/>
+			</line>
+			<textField>
+				<reportElement x="5" y="125" width="176" height="29" uuid="526cda48-36e3-4fb2-9c96-ed5997a7df77"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="20" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{CUST_NAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="182" y="125" width="138" height="29" uuid="60ac896a-308a-4393-8dfe-825e8d2d6c5f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="20" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{DEPOSIT_NO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="323" y="125" width="229" height="29" uuid="f2f1c16b-af5e-46fb-bb70-054aa05260a3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="20" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{CUST_CODE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="145" y="157" width="175" height="33" uuid="bff2cc0a-ecaf-4f5d-9663-e0da5e132cf5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="20" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TEXT_MONEY}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="411" y="157" width="116" height="33" uuid="fc7bf886-7bfe-4104-95ba-6a0e22f8c961"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="20" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{NUMBER_MONEY}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="57" y="3" width="259" height="30" uuid="26e1c217-08d7-4190-a05b-487c651d38d7"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH SarabunPSK" size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{BRANCH_NAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="57" y="55" width="88" height="25" uuid="f9368d52-c3de-4d63-8fe2-40cfba48e9f7"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="TH SarabunPSK" size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{D_DATE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="229" y="55" width="89" height="25" uuid="dd236900-1e2e-4b74-a910-f8ec184cca9a"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="TH SarabunPSK" size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{D_TIME}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="5" y="216" width="101" height="16" uuid="8dd70507-5e0e-4122-ac05-e4b46a8361f3"/>
+				<textElement>
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[Total Balance]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="198" width="101" height="18" uuid="696f2c93-96cf-44c7-9bbb-66da6ae091ea"/>
+				<textElement>
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[จำนวนเงินคงเหลือในบัญชี]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="106" y="198" width="171" height="34" uuid="0268d213-a20b-4798-b2b1-2410246089aa"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="20" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TOTAL_BALANCE}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="23" splitType="Stretch">
+			<textField>
+				<reportElement x="452" y="2" width="100" height="20" uuid="ca01a32c-31ab-440c-8135-84e6eceab432"/>
+				<textElement textAlignment="Right">
+					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

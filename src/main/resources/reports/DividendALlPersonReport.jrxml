@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Dividend ALl Person Report" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="27c8a4ca-5c70-495a-8f00-20211ad46f89">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="BRANCH_NAME" class="java.lang.String"/>
+	<parameter name="BRANCH_ADDR" class="java.lang.String"/>
+	<parameter name="BRANCH_CONTACT" class="java.lang.String"/>
+	<parameter name="DATE1" class="java.lang.String"/>
+	<parameter name="DATE2" class="java.lang.String"/>
+	<parameter name="TOTAL_BALANCE" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select f1.*,f2.*,concat(f1.CUST_NAME," ",f1.CUST_LASTNAME) as FULL_NAME 
+from cb_save_transaction f1, cb_finger_type f2
+where f1.Type_Code=f2.Type_Code 
+and DEPOSIT_DATE between $P{DATE1} and $P{DATE2}]]>
+	</queryString>
+	<field name="TYPE_CODE" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DOC_NO" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="BALANCE_OLD" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CUST_CODE" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CUST_NAME" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CUST_LASTNAME" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DEPOSIT_MONEY" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DEPOSIT_DATE" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DEPOSIT_TIME" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="EMP_CODE" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="EMP_NAME" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="BRANCH_CODE" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="BRANCH_NAME" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="REMARK" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="MONEY_TEXT" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="INTEREST" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="BALANCE" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="VAT" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="VAT_COM" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CI_UPD" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="B_TYPE" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TYPE_DESC" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="RUNNING" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="FULL_NAME" class="java.lang.String"/>
+	<variable name="BALANCE_1" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{BALANCE}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="70" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="69" width="555" height="1" uuid="d9856d8e-647d-4092-9ebc-807053e9bd33"/>
+			</line>
+			<staticText>
+				<reportElement x="271" y="0" width="276" height="60" uuid="f0babd49-8b99-41fe-b6c4-9e99aa55a885"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="32" isBold="true"/>
+				</textElement>
+				<text><![CDATA[รายงานการปันผลของผู้ถือหุ้น]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="0" width="261" height="20" uuid="e03e75c1-8caf-4aef-ae9c-2bf7411fe4e2"/>
+				<textElement>
+					<font fontName="TH SarabunPSK" size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{BRANCH_NAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="20" width="261" height="20" uuid="7b1fa0e1-9d8c-446a-a0b2-d55ecb9b6eb1"/>
+				<textElement>
+					<font fontName="TH SarabunPSK" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{BRANCH_ADDR}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement x="52" y="40" width="209" height="20" uuid="1c447aad-d67d-423a-b57e-ea60e113307c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{BRANCH_CONTACT}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="40" width="52" height="20" uuid="4a3581c0-997e-4d20-8be9-615faca96288"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[เบอร์ติดต่อ:]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="66" height="20" uuid="0b143f59-a9b0-48b8-9401-0c8f19b2c313"/>
+				<textElement textAlignment="Center">
+					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[วันที่ (Date)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="66" y="0" width="109" height="20" uuid="8ac7b93d-cf85-4652-b6b9-938642b05677"/>
+				<textElement textAlignment="Center">
+					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[รหัส]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="175" y="0" width="155" height="20" uuid="aa2c2a19-dea1-4ff0-8b5b-b6d313dd2c75"/>
+				<textElement textAlignment="Center">
+					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ชื่อ - สกุล ลูกค้้า]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="330" y="0" width="42" height="20" uuid="d6b06134-5ad8-49a7-8e90-3d26ae251f21"/>
+				<textElement>
+					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[จำนวนหุ้น]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="438" y="0" width="56" height="20" uuid="c5fc465d-9731-4edb-809f-3bcd903a6886"/>
+				<textElement textAlignment="Right">
+					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ปันผลยอดซื้อ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="494" y="0" width="53" height="20" uuid="473334c9-c81a-4d17-a18f-08d50d91ed5e"/>
+				<textElement textAlignment="Right">
+					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ปันผลได้รับ]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="20" width="555" height="1" uuid="08facfd5-0fac-4f08-81a5-0abbafc8b153"/>
+			</line>
+			<staticText>
+				<reportElement x="372" y="1" width="66" height="19" uuid="3014602e-e937-4992-8b9e-3f95a7d744fa"/>
+				<textElement textAlignment="Right">
+					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ปันผลการถือหุ้น]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="0" y="0" width="66" height="20" uuid="5ba6d247-1b63-4984-b09d-69233e217b74"/>
+				<textElement textAlignment="Center">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DEPOSIT_DATE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="66" y="0" width="109" height="20" uuid="f5461d16-5464-4d86-afc2-cc0f0e17ac98"/>
+				<textElement textAlignment="Center">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TYPE_CODE}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="438" y="0" width="56" height="20" uuid="2b274517-045b-48b9-b67e-d2f69ee67048"/>
+				<textElement textAlignment="Right">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{INTEREST}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="494" y="0" width="53" height="20" uuid="b0ff6f19-b15e-48ea-acf7-0769be3a285f"/>
+				<textElement textAlignment="Right">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{VAT_COM}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="330" y="0" width="42" height="20" uuid="d942c5c7-b8c4-4e2c-ab8d-6da4e0babea3"/>
+				<textElement>
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TYPE_DESC}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="372" y="0" width="66" height="19" uuid="bdedc893-1d85-47af-b412-4b55146065c0"/>
+				<textElement textAlignment="Right">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DEPOSIT_MONEY}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="175" y="0" width="155" height="20" uuid="0368a254-e516-43e6-8c79-696bf782b664"/>
+				<textElement>
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FULL_NAME}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="21">
+			<textField>
+				<reportElement x="455" y="0" width="100" height="20" uuid="77199c79-e73f-4e58-b479-944699a79ea3"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="6" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="2" width="555" height="1" uuid="11584334-4d8a-475f-b772-74ad4b534579"/>
+			</line>
+		</band>
+	</summary>
+</jasperReport>
