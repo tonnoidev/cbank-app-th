@@ -26,6 +26,7 @@ import th.co.cbank.project.model.PrintBean;
 import th.co.cbank.project.model.ProfileBean;
 
 public final class PrintCOM extends BaseControl {
+
     private final Logger logger = Logger.getLogger(PrintCOM.class);
     private Enumeration portList;
     private CommPortIdentifier portId;
@@ -308,43 +309,29 @@ public final class PrintCOM extends BaseControl {
 
     //WORK
     public void printLOG(String msg) {
+        try {
+            ConfigControl cc = new ConfigControl();
+            ConfigBean cBean = cc.getConfigBean();
+            if (cBean == null) {
+                return;
+            }
+            if (cBean.getPrintSlipPort() != null) {
+                portList = CommPortIdentifier.getPortIdentifiers();
 
-        ConfigControl cc = new ConfigControl();
-        ConfigBean cBean = cc.getConfigBean();
-        if (cBean == null) {
-            return;
-        }
-        if (cBean.getPrintSlipPort() != null) {
-            portList = CommPortIdentifier.getPortIdentifiers();
-
-            while (portList.hasMoreElements()) {
-                portId = (CommPortIdentifier) portList.nextElement();
-                if (portId.getPortType() == CommPortIdentifier.PORT_SERIAL) {
-                    if (portId.getName().equalsIgnoreCase(cBean.getPrintSlipPort())) {
-                        try {
+                while (portList.hasMoreElements()) {
+                    portId = (CommPortIdentifier) portList.nextElement();
+                    if (portId.getPortType() == CommPortIdentifier.PORT_SERIAL) {
+                        if (portId.getName().equalsIgnoreCase(cBean.getPrintSlipPort())) {
                             serialPort = (SerialPort) portId.open("SimpleWriteApp", 2000);
-                        } catch (PortInUseException e) {
-                            e.printStackTrace();
-                            return;
-                        }
-                        try {
+
                             outputStream = serialPort.getOutputStream();
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                            System.exit(0);
-                        }
-                        try {
                             serialPort.setSerialPortParams(9600,
                                     SerialPort.DATABITS_8,
                                     SerialPort.STOPBITS_1,
                                     SerialPort.PARITY_NONE);
-                        } catch (UnsupportedCommOperationException e) {
-                            e.printStackTrace();
-                        }
 
-                        initPrinter();
+                            initPrinter();
 
-                        try {
                             p(msg);
                             p("");///1
                             p("");///2
@@ -361,17 +348,16 @@ public final class PrintCOM extends BaseControl {
                             if (serialPort != null) {
                                 serialPort.close();
                             }
-                        } catch (IOException e) {
-                            e.printStackTrace();
                         }
                     }
                 }
+            } else {
+                JOptionPane.showMessageDialog(null, "Printer Comport ยังไม่ได้ติดตั้งกรุณาตั้งค่า");
+                Log.write.error("Printer Comport ยังไม่ได้ติดตั้งกรุณาตั้งค่า");
             }
-        } else {
-            JOptionPane.showMessageDialog(null, "Printer Comport ยังไม่ได้ติดตั้งกรุณาตั้งค่า");
-            Log.write.error("Printer Comport ยังไม่ได้ติดตั้งกรุณาตั้งค่า");
+        } catch (Exception e) {
+            System.err.println("Cannot print log from COM rxtx " + e.getMessage());
         }
-
     }
 
     //WORK

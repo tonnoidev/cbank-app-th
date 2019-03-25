@@ -7,6 +7,7 @@ import th.co.cbank.project.model.ProfileBean;
 import th.co.cbank.project.control.Value;
 import th.co.cbank.project.control.ViewReport;
 import java.awt.Font;
+import java.awt.HeadlessException;
 import java.awt.Image;
 import java.awt.Point;
 import java.awt.event.KeyEvent;
@@ -69,6 +70,7 @@ import th.co.cbank.util.NumberUtil;
 import th.co.cbank.util.StringUtil;
 
 public class MainDialog extends BaseSwing {
+
     private final Logger logger = Logger.getLogger(MainDialog.class);
     private final LoginDialog login;
     private boolean profileIsActive = false;
@@ -8216,7 +8218,7 @@ public class MainDialog extends BaseSwing {
 
                 loadSummary();
                 isStep1 = true;
-            } catch (Exception e) {
+            } catch (HeadlessException e) {
                 JOptionPane.showMessageDialog(this, e.getMessage());
                 Log.write.error(e.getMessage());
             }
@@ -9597,6 +9599,13 @@ public class MainDialog extends BaseSwing {
 
     private boolean validateDataLoan() {
 
+        ProfileBean pBean = getProfileControl().listCbProfile(LoanCustID.getText());
+        AddressBean aBean = getAddressControl().listProfileAddress(pBean.getP_custCode(), "1");
+        if (aBean == null) {
+            JOptionPane.showMessageDialog(this, "กรุณาระบุข้อมูลที่อยู่ของผู้กู้ ก่อนทำสัญญาเงินกู้ !");
+            return false;
+        }
+
         if (NumberUtil.toDouble(txtLoanAmt.getText()) <= 0) {
             JOptionPane.showMessageDialog(this, "กรุณาระบุจำนวนเงินที่ต้องการกู้ !");
             txtLoanAmt.selectAll();
@@ -10231,18 +10240,19 @@ public class MainDialog extends BaseSwing {
                 aBean = new AddressBean();
                 break;
         }
-
-        txtAddNo1.setText(aBean.getAddr_No());
-        txtAddrMoo1.setText(aBean.getAddr_Moo());
-        txtAddrMooName1.setText(aBean.getAddr_MooName());
-        txtAddrRoad1.setText(aBean.getAddr_Road());
-        txtAddrSoi1.setText(aBean.getAddr_Soi());
-        txtAddrTambon1.setText(aBean.getAddr_Tambon());
-        txtAddrAmphur1.setText(aBean.getAddr_Aumphur());
-        txtAddrProvince1.setText(aBean.getAddr_Province());
-        txtAddrPost1.setText(aBean.getAddr_Post());
-        txtAddrMobile1.setText(aBean.getAddr_Mobile());
-        txtAddrTel1.setText(aBean.getAddr_Tel());
+        if (aBean != null) {
+            txtAddNo1.setText(aBean.getAddr_No());
+            txtAddrMoo1.setText(aBean.getAddr_Moo());
+            txtAddrMooName1.setText(aBean.getAddr_MooName());
+            txtAddrRoad1.setText(aBean.getAddr_Road());
+            txtAddrSoi1.setText(aBean.getAddr_Soi());
+            txtAddrTambon1.setText(aBean.getAddr_Tambon());
+            txtAddrAmphur1.setText(aBean.getAddr_Aumphur());
+            txtAddrProvince1.setText(aBean.getAddr_Province());
+            txtAddrPost1.setText(aBean.getAddr_Post());
+            txtAddrMobile1.setText(aBean.getAddr_Mobile());
+            txtAddrTel1.setText(aBean.getAddr_Tel());
+        }
     }
 
     private void loadLoanAccount() {

@@ -43,6 +43,7 @@ import th.co.cbank.util.DateChooseDialog;
 import th.co.cbank.util.ImagePreviewPanel;
 
 public class SavingDialog extends BaseDialogSwing {
+
     private final Logger logger = Logger.getLogger(SavingDialog.class);
     private String imgName = "";
     private File imgFile = null;
@@ -2426,7 +2427,7 @@ public class SavingDialog extends BaseDialogSwing {
         int conf = JOptionPane.showConfirmDialog(this, "ท่านต้องการยกเลิกสมาชิกนี้ใช้หรือไม่ ?", "ยืนยันการยกเลิกสมาชิก",
                 JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
         if (conf == JOptionPane.YES_OPTION) {
-            if (processCancelMember()) {                
+            if (processCancelMember()) {
                 getEnableControl().enableComponents(jTabbedPane1, false);
 
                 btnSave.setEnabled(false);
@@ -2620,7 +2621,7 @@ public class SavingDialog extends BaseDialogSwing {
                 txtApproveLimit.setText("0");
                 txtApproveLimit.setEnabled(false);
                 jTabbedPane2.setEnabledAt(4, true);
-                
+
                 //enable = false
                 txtSurname.setEnabled(false);
                 txtOccupation.setEnabled(false);
@@ -2631,10 +2632,10 @@ public class SavingDialog extends BaseDialogSwing {
                 txtSpouseName.setEnabled(false);
                 txtSpouseSurname.setEnabled(false);
                 cbSex1.setEnabled(false);
-                
+
                 GroupAlertDialog ga = new GroupAlertDialog(null, true, cbMemberType.getLocationOnScreen());
                 ga.setVisible(true);
-                
+
                 txtCode.requestFocus();
             }
         }
@@ -2657,7 +2658,7 @@ public class SavingDialog extends BaseDialogSwing {
     }//GEN-LAST:event_jButton20KeyPressed
 
     private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
-        Value.CUST_CODE =  null;
+        Value.CUST_CODE = null;
         dispose();
     }//GEN-LAST:event_btnExitActionPerformed
 
@@ -2701,7 +2702,7 @@ public class SavingDialog extends BaseDialogSwing {
     }//GEN-LAST:event_btnMemEndDate1ActionPerformed
 
     private void txtExpireCardKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtExpireCardKeyPressed
-        if(evt.getKeyCode()==KeyEvent.VK_ENTER){
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             txtSpouseName.requestFocus();
         }
     }//GEN-LAST:event_txtExpireCardKeyPressed
@@ -2982,12 +2983,8 @@ public class SavingDialog extends BaseDialogSwing {
             }
 
             String status;
-            if (cbProfileStatus.getSelectedIndex() == 0) {
-                status = "0";
-            } else if (cbProfileStatus.getSelectedIndex() == 1) {
-                status = "1";
-            } else if (cbProfileStatus.getSelectedIndex() == 2) {
-                status = "2";
+            if (cbProfileStatus.getSelectedIndex() == 0 || cbProfileStatus.getSelectedIndex() == 1 || cbProfileStatus.getSelectedIndex() == 2) {
+                status = "" + cbProfileStatus.getSelectedIndex();
             } else {
                 status = "3";
             }
@@ -3003,21 +3000,29 @@ public class SavingDialog extends BaseDialogSwing {
             bean.setP_cust_religion(ThaiUtil.Unicode2ASCII("" + cbReligion.getSelectedItem()));
 
             String sex;
-            if (cbSex.getSelectedIndex() == 0) {
-                sex = "M";
-            } else if (cbSex.getSelectedIndex() == 1) {
-                sex = "F";
-            } else {
-                sex = "O";
+            switch (cbSex.getSelectedIndex()) {
+                case 0:
+                    sex = "M";
+                    break;
+                case 1:
+                    sex = "F";
+                    break;
+                default:
+                    sex = "O";
+                    break;
             }
             bean.setP_custSex(sex);
             String sex2;
-            if (cbSex1.getSelectedIndex() == 0) {
-                sex2 = "M";
-            } else if (cbSex1.getSelectedIndex() == 1) {
-                sex2 = "F";
-            } else {
-                sex2 = "O";
+            switch (cbSex1.getSelectedIndex()) {
+                case 0:
+                    sex2 = "M";
+                    break;
+                case 1:
+                    sex2 = "F";
+                    break;
+                default:
+                    sex2 = "O";
+                    break;
             }
 
             bean.setP_spouse_name(ThaiUtil.Unicode2ASCII(txtSpouseName.getText()));
@@ -3079,8 +3084,8 @@ public class SavingDialog extends BaseDialogSwing {
                 String memberType = m[0].trim();
                 bean.setP_member_type(memberType);
             }
-            
-            if(!txtExpireCard.getText().equals("")){
+
+            if (!txtExpireCard.getText().equals("")) {
                 Date dateExpire = DateFormat.getLocal_ddMMyyyy(txtExpireCard.getText());
                 bean.setCard_Expire(dateExpire);
             }
@@ -3281,7 +3286,7 @@ public class SavingDialog extends BaseDialogSwing {
             cb_prefix.setSelectedItem(p.getP_prefix());
             try {
                 cbProfileStatus.setSelectedIndex(Integer.parseInt(p.getP_cust_status()));
-            } catch (Exception e) {
+            } catch (NumberFormatException e) {
                 System.err.println(e.getMessage());
             }
 
@@ -3331,68 +3336,77 @@ public class SavingDialog extends BaseDialogSwing {
 
             //show Address
             AddressBean aBean1 = getAddressControl().listProfileAddress(p.getP_custCode(), "1");
-            txtAddNo1.setText(aBean1.getAddr_No());
-            txtAddrMoo1.setText(aBean1.getAddr_Moo());
-            txtAddrMooName1.setText(aBean1.getAddr_MooName());
-            txtAddrRoad1.setText(aBean1.getAddr_Road());
-            txtAddrSoi1.setText(aBean1.getAddr_Soi());
-            txtAddrTambon1.setText(aBean1.getAddr_Tambon());
-            txtAddrAmphur1.setText(aBean1.getAddr_Aumphur());
-            txtAddrProvince1.setText(aBean1.getAddr_Province());
-            txtAddrPost1.setText(aBean1.getAddr_Post());
-            txtAddrMobile1.setText(aBean1.getAddr_Mobile());
-            txtAddrTel1.setText(aBean1.getAddr_Tel());
+            if (aBean1 != null) {
+                txtAddNo1.setText(aBean1.getAddr_No());
+                txtAddrMoo1.setText(aBean1.getAddr_Moo());
+                txtAddrMooName1.setText(aBean1.getAddr_MooName());
+                txtAddrRoad1.setText(aBean1.getAddr_Road());
+                txtAddrSoi1.setText(aBean1.getAddr_Soi());
+                txtAddrTambon1.setText(aBean1.getAddr_Tambon());
+                txtAddrAmphur1.setText(aBean1.getAddr_Aumphur());
+                txtAddrProvince1.setText(aBean1.getAddr_Province());
+                txtAddrPost1.setText(aBean1.getAddr_Post());
+                txtAddrMobile1.setText(aBean1.getAddr_Mobile());
+                txtAddrTel1.setText(aBean1.getAddr_Tel());
+            }
 
             AddressBean aBean = getAddressControl().listProfileAddress(p.getP_custCode(), "2");
-            txtAddrNo2.setText(aBean.getAddr_No());
-            txtAddrMoo2.setText(aBean.getAddr_Moo());
-            txtAddrMooName2.setText(aBean.getAddr_MooName());
-            txtAddrRoad2.setText(aBean.getAddr_Road());
-            txtAddrSoi2.setText(aBean.getAddr_Soi());
-            txtAddrTambon2.setText(aBean.getAddr_Tambon());
-            txtAddrAmphur2.setText(aBean.getAddr_Aumphur());
-            txtAddrProvince2.setText(aBean.getAddr_Province());
-            txtAddrPost2.setText(aBean.getAddr_Post());
+            if (aBean != null) {
+                txtAddrNo2.setText(aBean.getAddr_No());
+                txtAddrMoo2.setText(aBean.getAddr_Moo());
+                txtAddrMooName2.setText(aBean.getAddr_MooName());
+                txtAddrRoad2.setText(aBean.getAddr_Road());
+                txtAddrSoi2.setText(aBean.getAddr_Soi());
+                txtAddrTambon2.setText(aBean.getAddr_Tambon());
+                txtAddrAmphur2.setText(aBean.getAddr_Aumphur());
+                txtAddrProvince2.setText(aBean.getAddr_Province());
+                txtAddrPost2.setText(aBean.getAddr_Post());
+            }
 
             AddressBean aBean3 = getAddressControl().listProfileAddress(p.getP_custCode(), "3");
-            txtAddr3ComName.setText(aBean3.getCompany_Name());
-            txtAddrNo3.setText(aBean3.getAddr_No());
-            txtAddrMoo3.setText(aBean3.getAddr_Moo());
-            txtAddrMooName3.setText(aBean3.getAddr_MooName());
-            txtAddrRoad3.setText(aBean3.getAddr_Road());
-            txtAddrSoi3.setText(aBean3.getAddr_Soi());
-            txtAddrTambon3.setText(aBean3.getAddr_Tambon());
-            txtAddrAmphur3.setText(aBean3.getAddr_Aumphur());
-            txtAddrProvince3.setText(aBean3.getAddr_Province());
-            txtAddrPost3.setText(aBean3.getAddr_Post());
+            if (aBean3 != null) {
+                txtAddr3ComName.setText(aBean3.getCompany_Name());
+                txtAddrNo3.setText(aBean3.getAddr_No());
+                txtAddrMoo3.setText(aBean3.getAddr_Moo());
+                txtAddrMooName3.setText(aBean3.getAddr_MooName());
+                txtAddrRoad3.setText(aBean3.getAddr_Road());
+                txtAddrSoi3.setText(aBean3.getAddr_Soi());
+                txtAddrTambon3.setText(aBean3.getAddr_Tambon());
+                txtAddrAmphur3.setText(aBean3.getAddr_Aumphur());
+                txtAddrProvince3.setText(aBean3.getAddr_Province());
+                txtAddrPost3.setText(aBean3.getAddr_Post());
+            }
 
             AddressBean aBean4 = getAddressControl().listProfileAddress(p.getP_custCode(), "4");
-            String pjName = aBean4.getCompany_Name();
-            if (pjName == null) {
-                pjName = "";
-            } else {
-                if (cbProject.getItemCount() > 0) {
-                    cbProject.setSelectedItem("" + aBean4.getCompany_Name());
+            if (aBean4 != null) {
+                String pjName = aBean4.getCompany_Name();
+                if (pjName == null) {
+                    pjName = "";
+                } else {
+                    if (cbProject.getItemCount() > 0) {
+                        cbProject.setSelectedItem("" + aBean4.getCompany_Name());
+                    }
                 }
-            }
-            txtAddrNo4.setText(aBean4.getAddr_No());
-            txtAddrMoo4.setText(aBean4.getAddr_Moo());
-            txtAddrMooName4.setText(aBean4.getAddr_MooName());
-            txtAddrRoad4.setText(aBean4.getAddr_Road());
-            txtAddrSoi4.setText(aBean4.getAddr_Soi());
-            txtAddrTambon4.setText(aBean4.getAddr_Tambon());
-            txtAddrAmphur4.setText(aBean4.getAddr_Aumphur());
-            txtAddrProvince4.setText(aBean4.getAddr_Province());
-            txtAddrPost4.setText(aBean4.getAddr_Post());
-            txtDownRai.setText("" + aBean4.getDown_rai());
-            txtDownDeed1.setText(aBean4.getDown_deed_1());
-            txtDownDeed2.setText(aBean4.getDown_deed_2());
-            txtDownDeed3.setText(aBean4.getDown_deed_3());
-            txtDownDeed4.setText(aBean4.getDown_deed_4());
-            if (!pjName.equals("")) {
-                jCheckBox5.setSelected(true);
-            } else {
-                jCheckBox5.setSelected(false);
+                txtAddrNo4.setText(aBean4.getAddr_No());
+                txtAddrMoo4.setText(aBean4.getAddr_Moo());
+                txtAddrMooName4.setText(aBean4.getAddr_MooName());
+                txtAddrRoad4.setText(aBean4.getAddr_Road());
+                txtAddrSoi4.setText(aBean4.getAddr_Soi());
+                txtAddrTambon4.setText(aBean4.getAddr_Tambon());
+                txtAddrAmphur4.setText(aBean4.getAddr_Aumphur());
+                txtAddrProvince4.setText(aBean4.getAddr_Province());
+                txtAddrPost4.setText(aBean4.getAddr_Post());
+                txtDownRai.setText("" + aBean4.getDown_rai());
+                txtDownDeed1.setText(aBean4.getDown_deed_1());
+                txtDownDeed2.setText(aBean4.getDown_deed_2());
+                txtDownDeed3.setText(aBean4.getDown_deed_3());
+                txtDownDeed4.setText(aBean4.getDown_deed_4());
+
+                if (!pjName.equals("")) {
+                    jCheckBox5.setSelected(true);
+                } else {
+                    jCheckBox5.setSelected(false);
+                }
             }
         } else {
             txtName.requestFocus();
