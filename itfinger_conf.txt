@@ -1,8 +1,8 @@
 server=localhost
-database=cbsystem
+database=cbsytem
 database_member=cbsystem
 username=root
-password=
+password=p@ssw0rd2535
 charset=tis-620
 port=3306
 macno=001
