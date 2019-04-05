@@ -191,11 +191,11 @@
 				<text><![CDATA[เป็นจำนวนเงิน]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="161" width="141" height="20" uuid="83dbaa20-651f-46fd-a1c9-6c65023145d3"/>
+				<reportElement x="0" y="161" width="244" height="20" uuid="83dbaa20-651f-46fd-a1c9-6c65023145d3"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="TH SarabunPSK" size="14"/>
 				</textElement>
-				<text><![CDATA[โดยใช้หลักทรัพย์ค้ำประกันการกู้คือ]]></text>
+				<text><![CDATA[โดยใช้หลักทรัพย์ค้ำประกันการกู้คือบุคคลในการค้ำประกัน]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="0" y="181" width="282" height="20" uuid="54e48e95-8db4-4dc1-b926-6eeba4582fd3"/>
@@ -661,7 +661,7 @@
 				<textFieldExpression><![CDATA[$P{p20}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="141" y="161" width="401" height="20" uuid="bc25d9b8-e02d-4c0a-b61a-9476e89dd976"/>
+				<reportElement x="253" y="161" width="289" height="20" uuid="bc25d9b8-e02d-4c0a-b61a-9476e89dd976"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
 				</textElement>
