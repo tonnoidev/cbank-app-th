@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" whenNoDataType="BlankPage" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d4c4aab9-c15f-4cdd-972d-8fb6d1b43458">
 	<property name="ireport.zoom" value="1.5"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="249"/>
 	<parameter name="p1" class="java.lang.String"/>
 	<parameter name="p2" class="java.lang.String"/>
 	<parameter name="p3" class="java.lang.String"/>
@@ -209,7 +209,7 @@
 				<textElement verticalAlignment="Middle">
 					<font fontName="TH SarabunPSK" size="14"/>
 				</textElement>
-				<text><![CDATA[ข้อ 2. ผู้กู้ยินยอมเสียดอกเบี้ยให้ผู้กู้ตามที่ผู้กู้ประกาศกำหนดร้อยละ]]></text>
+				<text><![CDATA[ข้อ 2. ผู้กู้ยินยอมเสียดอกเบี้ยผู้ให้กู้ตามที่ผู้ให้กู้ประกาศกำหนดร้อยละ]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="27" y="221" width="237" height="20" uuid="b000860b-ae31-4f44-93bd-764b2a283c19"/>
@@ -237,7 +237,7 @@
 				<textElement verticalAlignment="Middle">
 					<font fontName="TH SarabunPSK" size="14"/>
 				</textElement>
-				<text><![CDATA[และจำชำระหนี้เงินกู้ดังกล่าวให้หมดสิ้นภายใน   วันที่]]></text>
+				<text><![CDATA[และจะชำระหนี้เงินกู้ดังกล่าวให้หมดสิ้นภายใน   วันที่]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="27" y="301" width="269" height="20" uuid="606b92fe-c6f8-4ea1-a839-31f37263a171"/>
@@ -258,7 +258,7 @@
 				<textElement verticalAlignment="Middle">
 					<font fontName="TH SarabunPSK" size="14"/>
 				</textElement>
-				<text><![CDATA[ข้อ 5. กรณีที่ผู้กู้ไม่ปฏิบัติตามสัญญาหรือปฏิบัติผิดสัญญาข้อหนึ่งข้อใด ให้ถือว่าผู้กู้ผิดนัดทั้งหมดและให้ผู้กู้มีสิทธิ์]]></text>
+				<text><![CDATA[ข้อ 5. กรณีที่ผู้กู้ไม่ปฏิบัติตามสัญญาหรือปฏิบัติผิดสัญญาข้อหนึ่งข้อใด ให้ถือว่าผู้กู้ผิดนัดทั้งหมดและผู้ให้กู้มีสิทธิ์]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="0" y="361" width="484" height="20" uuid="5759b644-ae05-448f-8251-cc6cf115dfa2"/>
