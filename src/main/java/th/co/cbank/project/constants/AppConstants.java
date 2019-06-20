@@ -27,6 +27,7 @@ public class AppConstants {
     /* reports */
     public static final String JASPER_ROOT_PATH = "/reports/";
     public static final String JASPER_FILE = ".jasper";
+    public static final String JRXML_FILE = ".jrxml";
 
     public static final String JASPER_BUY_HOON_REPORT = JASPER_ROOT_PATH + "BuyHoonReport" + JASPER_FILE;
     public static final String JASPER_SELL_HOON_REPORT = JASPER_ROOT_PATH + "SellHoonReport" + JASPER_FILE;
@@ -54,5 +55,7 @@ public class AppConstants {
     public static final String JASPER_LOAN_PAPER_REPORT = JASPER_ROOT_PATH + "LoanPaperReport" + JASPER_FILE;
     public static final String JASPER_LOAN_PAPER_GARUNTEE_REPORT = JASPER_ROOT_PATH + "LoanPaperGaruntee" + JASPER_FILE;
     public static final String JASPER_LOAN_PAPER_GARUNTEE_REPORT_2 = JASPER_ROOT_PATH + "LoanPaperGaruntee2" + JASPER_FILE;
+    
+    public static final String JASPER_PRINT_PAPER_SLIP = JASPER_ROOT_PATH + "Print_Slip_Payment" + JRXML_FILE;
 
 }

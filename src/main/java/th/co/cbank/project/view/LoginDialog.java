@@ -370,8 +370,8 @@ public class LoginDialog extends BaseDialogSwing {
                     Log.write.error(e.getMessage());
                 }
 
-                PrintCOM printCom = new PrintCOM();
-                printCom.printLOG("Login by ... " + Value.USER_CODE + "   Start time: " + DateFormat.getLocale_ddMMyyyy(new Date()));
+//                PrintCOM printCom = new PrintCOM();
+//                printCom.printLOG("Login by ... " + Value.USER_CODE + "   Start time: " + DateFormat.getLocale_ddMMyyyy(new Date()));
 
                 dispose();
                 parent.setVisible(true);

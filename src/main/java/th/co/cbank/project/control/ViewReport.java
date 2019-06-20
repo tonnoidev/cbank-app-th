@@ -3,6 +3,8 @@ package th.co.cbank.project.control;
 import java.awt.HeadlessException;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -21,10 +23,14 @@ import javax.swing.JFrame;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JRExporterParameter;
 import net.sf.jasperreports.engine.JRPrintPage;
+import net.sf.jasperreports.engine.JasperCompileManager;
 import net.sf.jasperreports.engine.JasperExportManager;
 import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
+import net.sf.jasperreports.engine.design.JasperDesign;
 import net.sf.jasperreports.engine.export.JRPdfExporter;
 import net.sf.jasperreports.engine.util.JRLoader;
+import net.sf.jasperreports.engine.xml.JRXmlLoader;
 import org.apache.log4j.Logger;
 import th.co.cbank.project.constants.AppConstants;
 import th.co.cbank.project.model.ProfileBean;
@@ -34,6 +40,7 @@ import th.co.cbank.project.log.Log;
 import th.co.cbank.project.model.BranchBean;
 import th.co.cbank.project.model.CbSaveAccountBean;
 import th.co.cbank.project.model.CbSaveConfigBean;
+import th.co.cbank.project.model.mapping.PrintSlipPayment;
 
 public class ViewReport extends BaseControl {
 
@@ -638,4 +645,42 @@ public class ViewReport extends BaseControl {
         }
     }
 
+    public void printNewPaymentSlip() throws FileNotFoundException, IOException {
+        List beans = new ArrayList();
+
+        PrintSlipPayment bean = new PrintSlipPayment();
+        bean.setItem("Item Description 1");
+        bean.setAmount(500d);
+        bean.setSubAmount(0d);
+        beans.add(bean);
+        
+        PrintSlipPayment bean1 = new PrintSlipPayment();
+        bean1.setItem("Item Description 1");
+        bean1.setAmount(200d);
+        bean1.setSubAmount(0d);
+        beans.add(bean1);
+
+        try {
+            //\src\main\resources\reports\Print_Slip_Payment.jrxml
+            //\src\main\resources\reports\Print_Termal_Slip.jrxml
+            String rootPath = new File("").getCanonicalPath();
+            String path = new File(rootPath+"/src/main/resources"+AppConstants.JASPER_PRINT_PAPER_SLIP).getCanonicalPath();
+            FileInputStream inputStream = new FileInputStream(path);
+            JasperDesign jasperDesign = JRXmlLoader.load(inputStream);
+            JasperReport jasperReport = JasperCompileManager.compileReport(jasperDesign);
+
+            HashMap parameters = new HashMap();
+            JRBeanCollectionDataSource beanColDataSource = new JRBeanCollectionDataSource(beans);
+            JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, parameters, beanColDataSource);
+            JasperViewer v = new JasperViewer(jasperPrint, false);
+            JDialog j = new JDialog(new JFrame(), true);
+            j.setTitle("Print");
+            j.setSize(1024, 768);
+            j.getContentPane().add(v.getContentPane());
+            j.setLocationRelativeTo(null);
+            j.setVisible(true);
+        } catch (JRException ex) {
+            ex.printStackTrace();
+        }
+    }
 }

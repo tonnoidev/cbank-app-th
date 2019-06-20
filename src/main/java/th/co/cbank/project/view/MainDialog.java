@@ -8104,8 +8104,6 @@ public class MainDialog extends BaseSwing {
         if (ic == JOptionPane.YES_OPTION) {
             Value.clear();
             new File("cbanksystem.running").delete();
-            PrintCOM printCom = new PrintCOM();
-            printCom.printLOG("Logout by ... " + Value.CUST_CODE + "   End time: " + DateFormat.getLocale_ddMMyyyy(new Date()));
             System.exit(0);
         }
 

@@ -1,8 +1,8 @@
 server=localhost
-database=cbsytem
+database=cbsystem
 database_member=cbsystem
 username=root
-password=p@ssw0rd2535
+password=
 charset=tis-620
 port=3306
 macno=001
@@ -16,4 +16,3 @@ ftp_user=ftpuser
 ftp_pass=password
 ftp_port=21
 ftp_root_path=ton/jeffer
-dist_name=CBankSystem.jar
